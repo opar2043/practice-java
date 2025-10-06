@@ -8,7 +8,6 @@ public class BankAccount {
         this.accountnumber = accountnumber;
         this.balance = balance;
         System.out.println("Bank account created for " + accountname + " (Acc Number: " + accountnumber + ")");
-
         showBalance();
     }
 
@@ -19,7 +18,6 @@ public class BankAccount {
         }else{
             System.out.println("Invalid amount to deposit.");
         }
-
         showBalance();
     }
 
@@ -31,7 +29,6 @@ public class BankAccount {
         }else{
             System.out.println("Invalid amount to withdraw.");
         }
-
         showBalance();
     }
 
