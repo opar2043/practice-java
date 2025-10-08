@@ -1,8 +1,22 @@
-class Vehicle{
-    String name;
-    String color;
-    int speed;
 
+// Encapsulation
+
+import java.lang.reflect.Type;
+
+class Vehicle{
+   String name;
+   String color;
+   private int speed;
+
+    public void setSpeed(int speed){
+        this.speed = speed;
+    }
+
+    public int getSpeed(){
+        return speed;
+    }
+
+     
     Vehicle(String name , String color, int speed){
         this.name = name;
         this.color = color;
@@ -13,6 +27,7 @@ class Vehicle{
         System.out.println("name: " + name);
         System.out.println("color: " + color);
         System.out.println("speed: " + speed);
+        
     }
 }
 
@@ -36,8 +51,20 @@ class AddObject extends Vehicle{
 
 }
 
+class TypeVehicle extends AddObject{
+    String type ;
 
+    TypeVehicle(String name , String color, int speed , double price , String type){
+        super(name, color, speed, price);
+        this.type = type;
+    }
 
+ @Override
+   void display(){
+     super.display();
+     System.out.println("Type: " + type);
+    }
+}
 
 public class testAcc {
 
@@ -47,5 +74,8 @@ public class testAcc {
 
      AddObject bus = new AddObject("shymoli", "blue" , 33, 300);
      bus.display();
+
+    TypeVehicle truck = new TypeVehicle("Truck", "Black", 50, 500, "bike");
+    truck.display();
   }
 }
