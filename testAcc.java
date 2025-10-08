@@ -1,30 +1,51 @@
-public class testAcc{
+class Vehicle{
+    String name;
+    String color;
+    int speed;
 
-    // Encapsulation Example
-    private double balance;
-
-    public void deposit(double amount) {
-        if(amount > 0){
-            balance += amount;
-            System.out.println("Depositing : " + amount);
-        }
-    }
-    public void getBalance(){
-        System.out.println("Current balance: " + balance);
+    Vehicle(String name , String color, int speed){
+        this.name = name;
+        this.color = color;
+        this.speed = speed;
     }
 
-    // Inheritence Example
-    public class info extends testAcc{
-        String name = "Rijoan Rashid";
-        int accNumber = 2034;
+    void display(){
+        System.out.println("name: " + name);
+        System.out.println("color: " + color);
+        System.out.println("speed: " + speed);
+    }
+}
+
+
+// Inehritance
+class AddObject extends Vehicle{
+    double price;
+    
+    AddObject(String name , String color, int speed , double price){
+        super(name , color , speed);
+        this.price = price;
     }
 
-    public static void main(String[] args){
-        testAcc acc1 = new testAcc();
-        acc1.deposit(2000);
-        acc1.getBalance();       
-        acc1.deposit(300);
-    } 
+ 
+   @Override
+   void display() {
+       // TODO Auto-generated method stub
+       super.display();
+       System.out.println("Price: " + price);
+   }
+
+}
 
 
+
+
+public class testAcc {
+
+  public static void main(String[] aStrings){
+     Vehicle car = new Vehicle("Hanif", "Red", 100);
+     car.display();
+
+     AddObject bus = new AddObject("shymoli", "blue" , 33, 300);
+     bus.display();
+  }
 }
