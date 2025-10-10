@@ -8,7 +8,7 @@ class Vehicle{
    String color;
    private int speed;
 
-    public void setSpeed(int speed){
+    public void setSpeed(int speed){         
         this.speed = speed;
     }
 
@@ -17,13 +17,13 @@ class Vehicle{
     }
 
      
-    Vehicle(String name , String color, int speed){
+    Vehicle(String name , String color, int speed){       // Constructor
         this.name = name;
         this.color = color;
         this.speed = speed;
     }
 
-    void display(){
+    void display(){                         // Method
         System.out.println("name: " + name);
         System.out.println("color: " + color);
         System.out.println("speed: " + speed);
@@ -68,7 +68,7 @@ class TypeVehicle extends AddObject{
 
 public class testAcc {
 
-  public static void main(String[] aStrings){
+  public static void main(String[] aStrings){  
      Vehicle car = new Vehicle("Hanif", "Red", 100);
      car.display();
 
