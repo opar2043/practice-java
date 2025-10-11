@@ -46,10 +46,11 @@ class AddObject extends Vehicle{
    void display() {
        // TODO Auto-generated method stub
        super.display();
-       System.out.println("Price: " + price);
+       System.out.println("Prices: " + price);
    }
 
 }
+
 
 class TypeVehicle extends AddObject{
     String type ;
@@ -67,7 +68,6 @@ class TypeVehicle extends AddObject{
 }
 
 public class testAcc {
-
   public static void main(String[] aStrings){  
      Vehicle car = new Vehicle("Hanif", "Red", 100);
      car.display();
