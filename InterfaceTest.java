@@ -14,7 +14,6 @@ public class InterfaceTest {
         System.out.println(s + " from array list");
     }
     
-
      System.out.println("result : " + res);
      Bike b = new Bike();
      b.drive(30);
