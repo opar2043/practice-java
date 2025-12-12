@@ -10,7 +10,6 @@ public class Test {
 
         double result = MathFunc.cube(a) + MathFunc.secure(a) + a ;
         System.out.println("result: " + result);
-
         num.close();
     }
 }
