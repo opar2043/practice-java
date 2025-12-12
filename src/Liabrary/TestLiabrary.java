@@ -12,7 +12,7 @@ public class TestLiabrary {
         book.display();
         book.removeBook("Story Books");
 
-                // iv. Display the list again
+        // iv. Display the list again
         System.out.println("After removing :");
         book.display();
     }
